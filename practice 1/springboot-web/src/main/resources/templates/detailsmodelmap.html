@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:test="${title}"></title>
+</head>
+<body>
+    <h1>Carga de Model y Map</h1>
+    <br>
+    <h2>Model</h2>
+    <h2 th:text="${h2}"></h2>
+    <h2 th:text="${firstname}"></h2>
+    <h2 th:text="${lastname}"></h2>
+    <hr>
+    <ul>
+        <li th:text="${name1}"></li>
+        <li th:text="${name2}"></li>
+        <li th:text="${name3}"></li>
+    </ul>
+    <br>
+    <h2>Map</h2>
+    <h2 th:text="${h2map}"></h2>
+    <h2 th:text="${firstnamemap}"></h2>
+    <h2 th:text="${lastnamemap}"></h2>
+    <hr>
+    <ul>
+        <li th:text="${name1map}"></li>
+        <li th:text="${name2map}"></li>
+        <li th:text="${name3map}"></li>
+    </ul>
+</body>
+</html>

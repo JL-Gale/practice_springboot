@@ -16,8 +16,11 @@
 - Practiced passing **parameters via URL** using the `@RequestParam` and `@PathVariable` annotations, as well as with `HttpServletRequest`.  
 - Practiced creating a **JSON object** and sending it using the `@PostMapping` method.  
 - Practiced injecting values from a **configuration file** using `@Value`.  
+- Practiced injecting configurations using the **Environment object** with the `@Autowired` annotation.  
 - Practiced creating a **separate configuration file** and injecting it using `@PropertySources` or `@PropertySource` into the main class.  
 - Practiced creating a **configuration class** using `@Configuration`.  
+- Practiced **deploying and running the project** using **Maven** with `./mvnw package`.  
+
 
 ## Annotations Covered  
 
@@ -32,5 +35,6 @@
 - `@RequestBody`  
 - `@Value`  
 - `@Configuration`  
-- `@PropertySources` and `@PropertySource` 
+- `@PropertySources` and `@PropertySource`
+- `@Autowired`  
 

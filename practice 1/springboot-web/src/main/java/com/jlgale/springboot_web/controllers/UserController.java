@@ -3,8 +3,13 @@ package com.jlgale.springboot_web.controllers;
 import com.jlgale.springboot_web.models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -18,6 +23,7 @@ public class UserController {
     @GetMapping("/details")
     public String details(Model model) {
         User user = new User("JL", "Gale");
+        user.setEmail("pussydestroyer@email.com");
         model.addAttribute("h1", "Primer hola mundo con spring");
         model.addAttribute("title", "SpringBoot");
         model.addAttribute("user", user);
@@ -28,6 +34,26 @@ public class UserController {
 //        model.addAttribute("name2", "cecilia");
 //        model.addAttribute("name3", "milton");
         return "details2";
+    }
+
+    @GetMapping("/")
+    public String list(ModelMap model) {
+//        List<User> users = Arrays.asList(
+//                new User("Neymar", "junior", "ney@gmail.com"),
+//                new User("Cristiano", "Ronaldo"),
+//                new User("James", "Rodrigez"));
+        model.addAttribute("h1", "Listas con thymeleaf spring");
+        model.addAttribute("title", "SpringBoot");
+//        model.addAttribute("lista", users);
+        return "lista";
+    }
+
+    @ModelAttribute("lista")
+    public List<User> userModel() {
+        return Arrays.asList(
+                new User("Neymar", "junior", "ney@gmail.com"),
+                new User("Cristiano", "Ronaldo"),
+                new User("James", "Rodrigez"));
     }
 
     @GetMapping("/details/model")

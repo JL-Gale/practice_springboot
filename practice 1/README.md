@@ -10,6 +10,14 @@
 - Explained how the **MVC (Model-View-Controller) pattern** works.  
 - Introduced **DTO (Data Transfer Object)**, explained its purpose, and created a custom DTO.  
 - Worked with a **list** and displayed it in **JSON format**.  
+- Practiced how to change the **default project loading path**.  
+- Worked with various **Thymeleaf directives**, such as `if` and `each`, and demonstrated how to load a list.  
+- Practiced passing a **list to an HTML view** using the `@ModelAttribute` annotation.  
+- Practiced passing **parameters via URL** using the `@RequestParam` and `@PathVariable` annotations, as well as with `HttpServletRequest`.  
+- Practiced creating a **JSON object** and sending it using the `@PostMapping` method.  
+- Practiced injecting values from a **configuration file** using `@Value`.  
+- Practiced creating a **separate configuration file** and injecting it using `@PropertySources` or `@PropertySource` into the main class.  
+- Practiced creating a **configuration class** using `@Configuration`.  
 
 ## Annotations Covered  
 
@@ -17,4 +25,12 @@
 - `@RequestMapping`  
 - `@GetMapping`  
 - `@RestController`  
+- `@ModelAttribute`  
+- `@RequestParam`  
+- `@PathVariable`  
+- `@PostMapping`  
+- `@RequestBody`  
+- `@Value`  
+- `@Configuration`  
+- `@PropertySources` and `@PropertySource` 
 

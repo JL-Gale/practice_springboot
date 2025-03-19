@@ -14,7 +14,8 @@ public class ProductService {
 
     public List<Product> findAll() {
         return productRepository.findAll().stream().map(p -> {
-            Product pro = (Product) p.clone();
+//            Product pro = (Product) p.clone();
+            Product pro = new Product(p.getId(), p.getName(), p.getPrice());
             pro.setPrice((float) Math.round(p.getPrice() + (float) (p.getPrice() * 0.19)));
             return pro;
         }).collect(Collectors.toList());

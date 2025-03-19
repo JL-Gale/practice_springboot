@@ -10,7 +10,17 @@ import java.util.List;
 @RequestMapping("/api")
 public class ProductController {
 
-    ProductService productService = new ProductService();
+
+    ProductService productService;
+
+//    @Autowired
+//    public void setProductService(ProductService productService) {
+//        this.productService = productService;
+//    }
+
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
 
     @GetMapping("/findall")
     public List<Product> finAll() {

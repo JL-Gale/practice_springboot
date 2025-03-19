@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1025,
+    "name": "Array json",
+    "price": 3500
+  },
+  {
+    "id": 1026,
+    "name": "Acette json",
+    "price": 25501
+  },
+  {
+    "id": 1027,
+    "name": "Carne json",
+    "price": 19000
+  },
+  {
+    "id": 1028,
+    "name": "Plano json",
+    "price": 3500
+  }
+]

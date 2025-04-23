@@ -15,15 +15,19 @@ import java.time.LocalDate;
 public class EmployeDTO {
 
     /*
-    * @NotNull ->
-    * @NotBlank ->
-    * @NotEmpty ->
-    * @Min y @Max ->
-    * @Size ->
-    * @@Digits ->
-    * @Past y @Future ->
-    * @AssertFalse y @AssertTrue ->
+     * @NotNull --> Se usa para cuando no se quiere atributos nulos
+     * @NotBlank --> No permite cadenas vacías ni que contengan solo espacios (solo para Strings)
+     * @NotEmpty --> No permite valores vacíos (colecciones, arreglos, cadenas), pero sí nulos
+     * @Pattern --> Valida que una cadena cumpla con una expresión regular (solo para Strings)
+     * @Min y @Max --> Restringen valores numéricos a un mínimo y/o máximo
+     * @Positive y @PositiveOrZero --> Valida que el número sea mayor que 0 o mayor o igual a 0
+     * @Negative y @NegativeOrZero --> Valida que el número sea menor que 0 o menor o igual a 0
+     * @Size --> Define el tamaño mínimo y/o máximo para cadenas, colecciones, mapas o arreglos
+     * @Digits --> Restringe la cantidad de dígitos enteros y decimales (por ejemplo: @Digits(integer=5, fraction=2))
+     * @Past y @Future --> Valida que una fecha esté en el pasado o en el futuro
+     * @AssertFalse y @AssertTrue --> Requiere que un valor booleano sea falso o verdadero, respectivamente
      * */
+
 
     @NotBlank(message = "El campo name no puedes estar vacio cv")
     @Size(min = 3, max = 25)

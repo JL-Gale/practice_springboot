@@ -34,6 +34,8 @@ public class AppController {
         return Collections.singletonMap("message", "handler test4 del controlador");
     }
 
+
+
       // para cuando solo se use @Controller
 //    @GetMapping("/test")
 //    public ResponseEntity<String> test() {

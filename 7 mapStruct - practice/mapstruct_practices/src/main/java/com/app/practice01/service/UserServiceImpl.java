@@ -1,23 +1,29 @@
 package com.app.practice01.service;
 
-import com.app.practice01.model.User;
+import com.app.practice01.dto.UserDTO;
+import com.app.practice01.mapper.UserMapper;
 import com.app.practice01.repository.IUserRepository;
-import lombok.AllArgsConstructor;
 
 import java.util.List;
 
-@AllArgsConstructor
+
 public class UserServiceImpl implements IUserService{
 
     private IUserRepository userRepository;
+    private UserMapper userMapper;
 
-    @Override
-    public List<User> findAll() {
-        return userRepository.findAll();
+    public UserServiceImpl(IUserRepository userRepository, UserMapper userMapper) {
+        this.userRepository = userRepository;
+        this.userMapper = userMapper;
     }
 
     @Override
-    public User findById(Long id) {
-        return userRepository.findById(id).orElseThrow(NullPointerException::new);
+    public List<UserDTO> findAll() {
+        return userMapper.userListToUserListDTO(userRepository.findAll());
+    }
+
+    @Override
+    public UserDTO findById(Long id) {
+        return userMapper.userToUserDTO(userRepository.findById(id).orElseThrow(NullPointerException::new));
     }
 }

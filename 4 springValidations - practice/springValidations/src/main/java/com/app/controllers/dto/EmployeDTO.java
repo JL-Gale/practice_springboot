@@ -1,6 +1,6 @@
 package com.app.controllers.dto;
 
-import com.app.entities.Department;
+import com.app.advices.validation.anotation.ValidName;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -28,12 +28,11 @@ public class EmployeDTO {
      * @AssertFalse y @AssertTrue --> Requiere que un valor booleano sea falso o verdadero, respectivamente
      * */
 
-
     @NotBlank(message = "El campo name no puedes estar vacio cv")
     @Size(min = 3, max = 25)
     private String name;
 
-    @NotBlank
+    @ValidName
     private String lastname;
 
     @NotBlank
@@ -57,6 +56,6 @@ public class EmployeDTO {
     private LocalDate dateOfBirth;
 
     @Valid
-    private Department department;
+    private DepartmentDTO department;
 
 }
